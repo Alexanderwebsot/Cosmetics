@@ -31,6 +31,11 @@ $(document).ready(function () {
     nextArrow: $('.popular-arrow__right')
   });
   let menu_bottom = $('.page-bottom');
+  let otp = pageYOffset;
+  window.addEventListener('scroll', function() {
+    
+    alert(pageYOffset)
+  });
   $(function(){
     $(document).on('mousewheel DOMMouseScroll', function(event){
   	var course = event.originalEvent.wheelDelta;
