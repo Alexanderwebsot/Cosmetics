@@ -30,4 +30,16 @@ $(document).ready(function () {
     prevArrow: $('.popular-arrow__left'),
     nextArrow: $('.popular-arrow__right')
   });
+  let menu_bottom = $('.page-bottom');
+  $(function(){
+    $(document).on('mousewheel DOMMouseScroll', function(event){
+  	var course = event.originalEvent.wheelDelta;
+  	if(course  > 0){
+          $(menu_bottom).removeClass('page-bottom-active');
+        }
+        else{
+          $(menu_bottom).addClass('page-bottom-active');
+        }
+    });
+});
 });
