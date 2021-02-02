@@ -33,18 +33,14 @@ $(document).ready(function () {
   let menu_bottom = $('.page-bottom');
   let otp = pageYOffset;
   window.addEventListener('scroll', function() {
-    
-    alert(pageYOffset)
+    let new_otp = pageYOffset;
+    if (new_otp > otp) {
+      $(menu_bottom).addClass('page-bottom-active');
+    }
+    else{
+      $(menu_bottom).removeClass('page-bottom-active');
+    }
+    otp = pageYOffset;
   });
-  $(function(){
-    $(document).on('mousewheel DOMMouseScroll', function(event){
-  	var course = event.originalEvent.wheelDelta;
-  	if(course  > 0){
-          $(menu_bottom).removeClass('page-bottom-active');
-        }
-        else{
-          $(menu_bottom).addClass('page-bottom-active');
-        }
-    });
-});
+  
 });
