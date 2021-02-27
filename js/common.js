@@ -4,7 +4,7 @@ $(document).ready(function () {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    dots: true
+    variableWidth: true,
   });
   $('.catalog-slider-content').slick({
     infinite: true,
@@ -13,6 +13,10 @@ $(document).ready(function () {
     variableWidth: true,
     arrows: false
   });
+  $('.header-catalog-slider').slick({
+    slidesToScroll: 1,
+    variableWidth: true,
+  })
   $('.brends-slider').slick({
     infinite: true,
     slidesToShow: 3,
@@ -42,5 +46,5 @@ $(document).ready(function () {
     }
     otp = pageYOffset;
   });
-  
+
 });
