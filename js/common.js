@@ -32,19 +32,15 @@ $(document).ready(function () {
     arrows: true,
     dots: true,
     prevArrow: $('.popular-arrow__left'),
-    nextArrow: $('.popular-arrow__right')
+    nextArrow: $('.popular-arrow__right'),
   });
-  let menu_bottom = $('.page-bottom');
-  let otp = pageYOffset;
-  window.addEventListener('scroll', function() {
-    let new_otp = pageYOffset;
-    if (new_otp > otp) {
-      $(menu_bottom).addClass('page-bottom-active');
+  let menu_searh = $('.header-search-fixed');
+  $(window).scroll(function() {
+    if ($(this).scrollTop() >= 57) {
+      $(menu_searh).addClass('header-search-fixed__active');
     }
     else{
-      $(menu_bottom).removeClass('page-bottom-active');
+      $(menu_searh).removeClass('header-search-fixed__active');
     }
-    otp = pageYOffset;
   });
-
 });
